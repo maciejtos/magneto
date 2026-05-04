@@ -27,6 +27,8 @@
 
 html {
     scroll-behavior: smooth;
+    overflow-x: hidden;
+    width: 100%;
 }
 
 body {
@@ -35,6 +37,13 @@ body {
     color: var(--text-color);
     line-height: 1.6;
     overflow-x: hidden;
+    width: 100%;
+    position: relative;
+}
+
+.site-wrapper {
+    overflow: hidden;
+    width: 100%;
     position: relative;
 }
 
@@ -52,9 +61,10 @@ body {
 }
 
 .container {
+    width: 100%;
     max-width: 1280px;
     margin: 0 auto;
-    padding: 0 2rem;
+    padding: 0 1.5rem;
 }
 
 /* Typography */
@@ -285,6 +295,7 @@ p {
     color: var(--c-yellow);
     padding: 1.5rem 0;
     overflow: hidden;
+    width: 100%;
     border-bottom: var(--border-width) solid var(--border-color);
     white-space: nowrap;
 }

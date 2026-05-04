@@ -41,12 +41,6 @@ body {
     position: relative;
 }
 
-.site-wrapper {
-    overflow: hidden;
-    width: 100%;
-    position: relative;
-}
-
 /* Noise overlay for texture */
 .noise-overlay {
     position: fixed;
@@ -620,37 +614,57 @@ p {
 
 /* Responsive */
 @media (max-width: 992px) {
-    .hero-container, .contact-container, .about-container {
+    .hero-container,
+    .contact-container,
+    .about-container {
         grid-template-columns: 1fr;
+        gap: 2rem;
     }
     
     .hero-visual {
-        min-height: 300px;
+        min-height: 250px;
         order: -1;
     }
 
     .services-grid {
         grid-template-columns: 1fr;
+        gap: 2rem;
     }
 
     .service-card.span-2 {
         grid-column: span 1;
     }
+
+    .hero {
+        padding: 4rem 0;
+    }
+
+    .about,
+    .services,
+    .contact {
+        padding: 5rem 0;
+    }
+
+    .footer-brand {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 1.5rem;
+    }
+
+    .footer-brand p {
+        text-align: left;
+    }
 }
 
 @media (max-width: 768px) {
-    .hero-title {
-        font-size: 2.25rem;
-    }
-    
     .header-container {
         flex-direction: column;
-        gap: 1.5rem;
+        gap: 1rem;
         text-align: center;
     }
 
     .logo {
-        font-size: 1.5rem;
+        font-size: 1.75rem;
         flex-wrap: wrap;
         justify-content: center;
         gap: 0.25rem;
@@ -661,43 +675,283 @@ p {
     }
 
     .logo-sub {
-        font-size: 1.25rem;
+        font-size: 1.1rem;
         width: 100%;
         display: block;
+        text-align: center;
     }
 
     .main-nav {
         width: 100%;
         justify-content: center;
         flex-wrap: wrap;
-        gap: 1rem;
+        gap: 0.75rem;
     }
 
     .nav-link {
+        font-size: 0.9rem;
+    }
+
+    .btn-contact {
+        padding: 0.6rem 1.2rem;
+    }
+
+    .hero {
+        padding: 3rem 0;
+    }
+
+    .hero-title {
+        font-size: 2rem;
+    }
+
+    .hero-title .highlight {
+        padding: 0 0.25rem;
+    }
+
+    .hero-subtitle {
+        font-size: 1.1rem;
+        margin-bottom: 2rem;
+    }
+
+    .hero-visual {
+        min-height: 200px;
+    }
+
+    .shape-1 {
+        width: 150px;
+        height: 150px;
+    }
+
+    .shape-2 {
+        width: 120px;
+        height: 120px;
+    }
+
+    .shape-3 {
+        width: 100px;
+        height: 100px;
+    }
+
+    .btn {
         font-size: 1rem;
+        padding: 0.875rem 1.5rem;
+        box-shadow: var(--shadow-sm);
     }
 
-    .contact-card {
-        padding: 1.5rem 1rem;
+    .section-title {
+        font-size: 2rem;
+        margin-bottom: 2.5rem;
     }
 
-    .contact-value {
-        font-size: 1.25rem;
-        word-break: break-word;
+    .service-card {
+        padding: 2rem 1.5rem;
+        box-shadow: var(--shadow-sm);
     }
 
-    .footer-brand {
+    .service-card h3 {
+        font-size: 1.75rem;
+        margin-bottom: 1rem;
+    }
+
+    .card-header-flex {
         flex-direction: column;
         align-items: flex-start;
         gap: 1rem;
     }
 
-    .footer-brand p {
-        text-align: left;
+    .card-icon {
+        width: 60px;
+        height: 60px;
+        margin-bottom: 1.5rem;
+    }
+
+    .card-header-flex .card-icon {
+        margin-bottom: 0;
+    }
+
+    .tags-container {
+        gap: 0.5rem;
+    }
+
+    .tag {
+        font-size: 0.75rem;
+        padding: 0.4rem 0.75rem;
+    }
+
+    .about,
+    .services,
+    .contact {
+        padding: 4rem 0;
+    }
+
+    .about-text {
+        font-size: 1.1rem;
+    }
+
+    .stat-card {
+        padding: 1.5rem;
+        box-shadow: var(--shadow-sm);
+        transform: rotate(0deg);
+    }
+
+    .stat-card:nth-child(even) {
+        transform: rotate(0deg);
+    }
+
+    .stat-number {
+        font-size: 2.5rem;
+    }
+
+    .contact-card {
+        padding: 1.25rem 1rem;
+        box-shadow: var(--shadow-sm);
+    }
+
+    .contact-value {
+        font-size: 1.15rem;
+        word-break: break-word;
+        overflow-wrap: break-word;
+    }
+
+    .contact-desc {
+        font-size: 1.2rem;
+        margin-bottom: 2rem;
+    }
+
+    .contact-graphic {
+        display: none;
+    }
+
+    .big-star {
+        width: 200px;
+        height: 200px;
     }
 
     .footer-brand .logo {
+        font-size: 1.75rem;
+    }
+
+    .site-footer {
+        padding: 3rem 0 1.5rem;
+    }
+
+    .footer-company-details p {
+        font-size: 0.9rem;
+    }
+
+    .marquee {
+        font-size: 1.1rem;
+    }
+
+    .marquee span {
+        margin: 0 1rem;
+    }
+
+    .cookie-banner {
+        bottom: 1rem;
+        left: 1rem;
+        right: 1rem;
+        padding: 1.5rem;
+        max-width: 100%;
+    }
+
+    .cookie-content h3 {
+        font-size: 1.25rem;
+    }
+
+    .cookie-content p {
+        font-size: 0.9rem;
+        margin-bottom: 1rem;
+    }
+
+    .btn-sm {
+        padding: 0.5rem 0.75rem;
+        font-size: 0.875rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .container {
+        padding: 0 1rem;
+    }
+
+    .logo {
+        font-size: 1.5rem;
+    }
+
+    .logo-sub {
+        font-size: 1rem;
+    }
+
+    .hero-title {
+        font-size: 1.75rem;
+    }
+
+    .hero-subtitle {
+        font-size: 1rem;
+    }
+
+    .hero-visual {
+        min-height: 160px;
+    }
+
+    .shape-1 {
+        width: 120px;
+        height: 120px;
+    }
+
+    .shape-2 {
+        width: 90px;
+        height: 90px;
+    }
+
+    .shape-3 {
+        width: 80px;
+        height: 80px;
+    }
+
+    .section-title {
+        font-size: 1.75rem;
+        margin-bottom: 2rem;
+    }
+
+    .service-card {
+        padding: 1.5rem 1rem;
+    }
+
+    .service-card h3 {
+        font-size: 1.5rem;
+    }
+
+    .brutal-list li {
+        font-size: 0.95rem;
+        padding: 0.75rem 0;
+    }
+
+    .stat-number {
         font-size: 2rem;
+    }
+
+    .stat-label {
+        font-size: 1rem;
+    }
+
+    .contact-value {
+        font-size: 1rem;
+    }
+
+    .click-hint {
+        font-size: 0.75rem;
+        padding: 0.4rem 0.75rem;
+    }
+
+    .footer-brand .logo {
+        font-size: 1.5rem;
+    }
+
+    .btn {
+        font-size: 0.9rem;
+        padding: 0.75rem 1.25rem;
     }
 }
 
@@ -789,11 +1043,3 @@ p {
     font-size: 1rem;
 }
 
-@media (max-width: 768px) {
-    .cookie-banner {
-        bottom: 1rem;
-        left: 1rem;
-        right: 1rem;
-        padding: 1.5rem;
-    }
-}
